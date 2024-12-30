@@ -8,13 +8,13 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
-    "build": "tsc && vite build && npm run copy-assets",
-    "copy-assets": "node scripts/copy-assets.js",
+    "build": "tsc && vite build && node scripts/copy-assets.js",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "framer-motion": "^11.15.0",
+    "fs-extra": "^11.2.0",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
