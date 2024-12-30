@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +38,6 @@ const Navbar = () => {
     { id: 'projects', label: 'Projects' },
     { id: 'qualifications', label: 'Past Qualifications' },
     { id: 'contact', label: 'Contact' },
-   
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -51,13 +51,13 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 cursor-pointer" onClick={() => scrollToSection('home')}>
-            <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               Portfolio
             </span>
           </div>
