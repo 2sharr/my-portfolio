@@ -3,6 +3,7 @@ import ProfileImage from './ProfileImage';
 import ProfileInfo from './ProfileInfo';
 import ActionButtons from './ActionButtons';
 import SocialStats from './SocialStats';
+import { getAssetPath } from '../../utils/assetPath';
 
 const Hero = () => {
   return (
@@ -16,7 +17,7 @@ const Hero = () => {
       >
         <video
           className="absolute inset-0 w-full h-full object-cover"
-          src={import.meta.env.BASE_URL + 'images/banner.mp4'}
+          src="/images/banner.mp4"
           autoPlay
           loop
           muted

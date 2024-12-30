@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Camera, X } from 'lucide-react';
 import { useState } from 'react';
+import { getAssetPath } from '../../utils/assetPath';
 
 const ProfileImage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,7 +16,7 @@ const ProfileImage = () => {
         onClick={() => setIsModalOpen(true)}
       >
         <motion.img
-          src={import.meta.env.BASE_URL + 'images/tushar.jpg'}
+          src="/images/tushar.jpg"
           alt="Tushar Ravi Shinde"
           className="w-[180px] h-[180px] rounded-full border-4 border-white shadow-lg object-cover"
           whileHover={{ scale: 1.05 }}
@@ -60,7 +61,7 @@ const ProfileImage = () => {
                 <X size={24} />
               </motion.button>
               <img
-                src={import.meta.env.BASE_URL + 'images/tushar.jpg'}
+                src={getAssetPath('images/tushar.jpg')}
                 alt="Tushar Ravi Shinde"
                 className="w-full h-full object-contain"
               />

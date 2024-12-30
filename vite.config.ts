@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -8,11 +9,16 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   server: {
-    host: 'localhost', // Ensures it listens on localhost
-    port: 5173, // Default port, can change if needed
-    strictPort: true, // Prevents Vite from picking another port if 5173 is in use
+    host: true,
+    port: 5173,
+    strictPort: true,
   },
-  base: '/my-portfolio/',
+  base: '/',
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
