@@ -16,7 +16,7 @@ const ProfileImage = () => {
         onClick={() => setIsModalOpen(true)}
       >
         <motion.img
-          src="/images/tushar.jpg"
+          src="/my-portfolio/images/tushar.jpg"
           alt="Tushar Ravi Shinde"
           className="w-[180px] h-[180px] rounded-full border-4 border-white shadow-lg object-cover"
           whileHover={{ scale: 1.05 }}
@@ -61,7 +61,7 @@ const ProfileImage = () => {
                 <X size={24} />
               </motion.button>
               <img
-                src={getAssetPath('images/tushar.jpg')}
+                src="/my-portfolio/images/tushar.jpg"
                 alt="Tushar Ravi Shinde"
                 className="w-full h-full object-contain"
               />
