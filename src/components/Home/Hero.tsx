@@ -16,7 +16,7 @@ const Hero = () => {
       >
         <video
           className="absolute inset-0 w-full h-full object-cover"
-          src="/my-portfolio/images/banner.mp4"
+          src={import.meta.env.BASE_URL + 'images/banner.mp4'}
           autoPlay
           loop
           muted

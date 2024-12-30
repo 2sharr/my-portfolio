@@ -1,4 +1,3 @@
 export const getAssetPath = (path: string) => {
-  const basePath = import.meta.env.DEV ? '' : '/my-portfolio';
-  return `${basePath}${path}`;
+  return `${import.meta.env.BASE_URL}${path.startsWith('/') ? path.slice(1) : path}`;
 }; 

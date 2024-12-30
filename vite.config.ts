@@ -13,4 +13,9 @@ export default defineConfig({
     strictPort: true, // Prevents Vite from picking another port if 5173 is in use
   },
   base: '/my-portfolio/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    copyPublicDir: true
+  }
 });
